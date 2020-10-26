@@ -48,7 +48,7 @@ class BiLSTM_CRF(nn.Module):
         # Maps the output of the LSTM into tag space.
         self.hidden2tag = nn.Linear(hidden_dim, self.tagset_size)
         # Matrix of transition parameters. Entry i,j is the score of transitioning *to* i *from* j.
-        # Transition matrix is used to compute transition potential t(O,I_i-1,I_i+1)
+        # Transition matrix is used to compute transition potential t(O,I_i,I_i+1)
         self.transitions = nn.Parameter(torch.randn(self.tagset_size, self.tagset_size))
         # These two statements enforce the constraint that we never transfer *to* the start tag,
         # and we never transfer *from* the stop tag (the model would probably learn this anyway,
