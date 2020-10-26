@@ -2,8 +2,7 @@
 some exercises from DeepLearningForNLPInPytorch by rguthrie3
 https://github.com/rguthrie3/DeepLearningForNLPInPytorch
 
-IDE: PyCharm
-
+IDE: PyCharm\n
 python version: 3.6.4
 
 torch version: 0.4.1
