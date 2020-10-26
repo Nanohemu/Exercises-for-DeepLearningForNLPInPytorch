@@ -64,6 +64,7 @@ class BiLSTM_CRF(nn.Module):
     def _forward_alg(self, feats):
         # This function is called during training
         # Do the forward algorithm to compute the partition function
+        # No need to declare 'init_alphas'
         forward_var = torch.Tensor(1, self.tagset_size).fill_(-10000.)
         # START_TAG has all of the score.
         forward_var[0][self.tag_to_ix[START_TAG]] = 0.
